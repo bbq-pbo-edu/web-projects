@@ -20,14 +20,15 @@
 body {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: var(--main-bg-color);
 }
 
 .container {
-    background-color: var(--main-bg-color);
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
-    min-width: 320px;
+    max-width: 1200px;
+    min-width: 1074px;
     gap: 3rem;
 }
 
@@ -125,15 +126,16 @@ body {
     padding: 1rem 1.5rem;
     border-radius: 8px;
     border: 2px solid transparent;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
-    transition: border, transform 200ms;
+    transition: border, transform 200ms ease, box-shadow 200ms ease;
 }
 
 .project-cards .projects-list .project-card:hover {
     border: 2px solid var(--accent-color);
     cursor: pointer;
     transform: translateY(-5px) translateX(5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .project-cards .projects-list .project-card .project-icon {
