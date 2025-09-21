@@ -43,8 +43,10 @@ body {
     align-self: center;
     width: 48px;
     height: 48px;
-    border: 1px solid black;
     margin-top: 2rem;
+    background-color: #FFF;
+    border-radius: 8px;
+    object-fit: scale-down;
 }
 
 .sidebar .menu {
@@ -66,7 +68,7 @@ body {
 
 .sidebar .menu .nav-item.active a {
     background-color: var(--accent-color);
-    border-radius: 0.5rem;
+    border-radius: 8px;
     font-weight: bold;
 }
 
@@ -78,6 +80,8 @@ body {
     border-radius: 50%;
     margin-top: auto;
     margin-bottom: 2rem;
+    background-color: #FFF;
+    object-fit: scale-down;
 }
 
 /* === Main Section === */
@@ -114,11 +118,11 @@ body {
 
 .project-cards .projects-list .project-card {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
     background-color: #FFF;
     margin-bottom: 2rem;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     border-radius: 8px;
     border: 2px solid transparent;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -133,9 +137,8 @@ body {
 }
 
 .project-cards .projects-list .project-card .project-icon {
-    width: 48px;
-    height: 48px;
-    border: 1px solid black;
+    width: 32px;
+    height: 32px;
 }
 
 .project-cards .projects-list .project-card .project-title {

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="12.7mm"
+   height="12.7mm"
+   viewBox="0 0 12.7 12.7"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <g
+       id="g3"
+       transform="matrix(0.8302966,0,0,0.65267245,-3.6955363,3.4347155)">
+      <g
+         id="g1"
+         style="fill:none;stroke:#2c3e50;stroke-width:1.00013;stroke-dasharray:none;stroke-opacity:1">
+        <path
+           style="fill:none;stroke:#2c3e50;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 8.482404,1.8412639 7.0975216,4.3434944 v 0"
+           id="path1" />
+        <path
+           style="fill:none;stroke:#2c3e50;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 7.0757999,4.3826586 1.474554,2.4504585 v 0"
+           id="path1-8" />
+      </g>
+      <g
+         id="g2"
+         style="fill:none;stroke:#27ae60;stroke-width:1.00013;stroke-dasharray:none;stroke-opacity:1"
+         transform="translate(-1.0775188,0.04269733)">
+        <path
+           style="fill:none;stroke:#27ae60;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 8.482404,1.8412639 7.0975216,4.3434944 v 0"
+           id="path1-5" />
+        <path
+           style="fill:none;stroke:#27ae60;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 7.0757999,4.3826586 1.474554,2.4504585 v 0"
+           id="path1-8-1" />
+      </g>
+    </g>
+    <g
+       id="g4"
+       transform="matrix(-0.8302966,0,0,-0.65267245,16.061607,9.1275857)">
+      <g
+         id="g2-2"
+         style="fill:none;stroke:#2c3e50;stroke-width:1.00013;stroke-dasharray:none;stroke-opacity:1">
+        <path
+           style="fill:none;stroke:#2c3e50;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 8.482404,1.8412639 7.0975216,4.3434944 v 0"
+           id="path1-7" />
+        <path
+           style="fill:none;stroke:#2c3e50;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 7.0757999,4.3826586 1.474554,2.4504585 v 0"
+           id="path1-8-6" />
+      </g>
+      <g
+         id="g3-1"
+         style="fill:none;stroke:#27ae60;stroke-width:1.00013;stroke-dasharray:none;stroke-opacity:1"
+         transform="translate(-1.0775188,0.04269733)">
+        <path
+           style="fill:none;stroke:#27ae60;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 8.482404,1.8412639 7.0975216,4.3434944 v 0"
+           id="path1-5-4" />
+        <path
+           style="fill:none;stroke:#27ae60;stroke-width:1.00013;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 7.0757999,4.3826586 1.474554,2.4504585 v 0"
+           id="path1-8-1-2" />
+      </g>
+    </g>
+    <g
+       id="g5"
+       transform="matrix(0.8302966,0,0,0.65267245,0.04315229,2.8800653)">
+      <path
+         style="fill:none;stroke:#2c3e50;stroke-width:0.925751;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="M 7.1504434,3.1102752 C 5.9587263,7.3707657 5.9587263,7.3707657 5.9587263,7.3707657"
+         id="path3" />
+      <path
+         style="fill:none;stroke:#2c3e50;stroke-width:0.925751;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="M 8.820965,3.3231293 C 7.6292479,7.5836198 7.6292479,7.5836198 7.6292479,7.5836198"
+         id="path3-6" />
+    </g>
+  </g>
+</svg>
