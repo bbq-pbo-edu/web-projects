@@ -1,0 +1,143 @@
+:root {
+    /* Color definitions */
+    --main-bg-color: #F8F9FA;
+    --primary-color: #2C3E50;
+    --accent-color: #27AE60;
+    --nav-font-color: #FFF;
+
+    /* Typography */
+    --heading-font-size: 3rem; /* defaults to 36px */
+    --body-font-size: 1rem; /* defaults to 16px */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    min-width: 320px;
+    gap: 3rem;
+}
+
+/* === Navigation Sidebar === */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 65%;
+}
+
+.sidebar .logo {
+    align-self: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    margin-top: 2rem;
+}
+
+.sidebar .menu {
+    margin-top: 5rem;
+}
+
+.sidebar .menu .nav-item {
+    list-style: none;
+    margin-bottom: 10rem;
+    transform: rotate(90deg);
+}
+
+.sidebar .menu .nav-item a {
+    text-decoration: none;
+    color: var(--nav-font-color);
+    transform: rotate(180deg);
+    padding: 2rem;
+}
+
+.sidebar .menu .nav-item.active a {
+    background-color: var(--accent-color);
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.sidebar .profile-picture {
+    align-self: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+/* === Main Section === */
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+}
+
+.main h1 {
+    font-size: var(--heading-font-size);
+    color: var(--primary-color);
+}
+
+.main .bio {
+    font-size: var(--body-font-size);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 55ch;
+    line-height: 1.4;
+    border-bottom: 2px solid var(--accent-color);
+    border-top: 2px solid var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* === Project Cards Section === */
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    padding-right: 3rem;
+}
+
+.project-cards .projects-list .project-card {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    background-color: #FFF;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    transition: border, transform 200ms;
+}
+
+.project-cards .projects-list .project-card:hover {
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+    transform: translateY(-5px) translateX(5px);
+}
+
+.project-cards .projects-list .project-card .project-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+}
+
+.project-cards .projects-list .project-card .project-title {
+    align-self: center;
+}
