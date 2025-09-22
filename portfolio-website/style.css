@@ -136,6 +136,12 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
+.projects-section .projects-list .project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+}
+
 .projects-section .projects-list .project-card .project-icon {
     width: 32px;
     height: 32px;
