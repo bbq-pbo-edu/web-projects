@@ -108,6 +108,30 @@ body {
     border-top: 2px solid var(--accent-color);
 }
 
+/* === Webserver IP Address Table === */
+.ip-table-container {
+    margin-top: 2rem;
+}
+
+.ip-table-container > h2 {
+    margin-bottom: 2rem;
+}
+.ip-table {
+    border-collapse: collapse;
+}
+
+.ip-table tr {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.ip-table > th, td {
+    padding: 1rem 1rem;
+}
+
+.ip-table th {
+
+}
+
 /* === Project Cards Section === */
 .projects-section {
     display: flex;
