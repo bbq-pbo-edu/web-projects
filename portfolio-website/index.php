@@ -1,3 +1,7 @@
+<?php
+require_once "./data/students-data.php";
+
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -41,33 +45,17 @@
                 <tr>
                     <th>Name</th>
                     <th>Vorname</th>
+                    <th>Domain</th>
                     <th>Webserver IP</th>
                 </tr>
-                <tr>
-                    <td>Petruschke</td>
-                    <td>Dennis</td>
-                    <td><a href="http://10.101.105.175/" target="_blank">10.101.105.175</a></td>
-                </tr>
-                <tr>
-                    <td>Ahmed</td>
-                    <td>Shezleen</td>
-                    <td><a href="http://10.101.105.180/" target="_blank">10.101.105.180</a></td>
-                </tr>
-                <tr>
-                    <td>Ajvazi</td>
-                    <td>Vullnet</td>
-                    <td><a href="http://10.101.105.185/" target="_blank">10.101.105.185</a></td>
-                </tr>
-                <tr>
-                    <td>Hagedorn</td>
-                    <td>Bastian</td>
-                    <td><a href="http://10.101.105.190/" target="_blank">10.101.105.190</a></td>
-                </tr>
-                <tr>
-                    <td>Purtov</td>
-                    <td>Server</td>
-                    <td><a href="http://10.101.105.195/" target="_blank">10.101.105.195</a></td>
-                </tr>
+                <?php for ($i = 0; $i < count($users); $i++) { ?>
+                    <tr>
+                        <td><?= $users[$i]['lastname'] ?></td>
+                        <td><?= $users[$i]['firstname'] ?></td>
+                        <td><a href='http://<?= $users[$i]['domain'] ?>'><?= $users[$i]['domain'] ?></a></td>
+                        <td><a href='http://<?= $users[$i]['ip'] ?>' target='_blank'><?= $users[$i]['ip'] ?></a></td>
+                    </tr>
+                <?php } ?>
             </table>
         </div>
     </main>
