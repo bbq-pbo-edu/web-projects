@@ -32,7 +32,7 @@ require_once "./data/students-data.php";
         </div>
     </nav>
     <main class="main">
-        <h1>Patrick B.</h1>
+        <h1>Portfolio</h1>
         <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate, nisl at bibendum
             fermentum, nibh risus consectetur urna, at imperdiet justo enim nec mauris. Curabitur sit amet nisl eu odio
             vehicula tincidunt vitae eu justo. Integer ullamcorper lectus et ante feugiat, id convallis orci tempor.<br><br>Praesent
