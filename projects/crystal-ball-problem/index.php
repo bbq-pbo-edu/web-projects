@@ -120,6 +120,10 @@
                         <p class="result-label">Drop &#8709;</p>
                         <p class="result-value">-</p>
                     </div>
+                    <div class="bulk-worst-case">
+                        <p class="result-label">Worst Case</p>
+                        <p class="result-value">-</p>
+                    </div>
                 </div>
             </form>
         </div>
