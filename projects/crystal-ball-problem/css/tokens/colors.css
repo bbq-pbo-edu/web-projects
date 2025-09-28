@@ -1,0 +1,35 @@
+:root {
+    /* Slate Family */
+    --color-slate-50: #f9fafb;
+    --color-slate-100: #eaedf0;
+    --color-slate-150: #dbe0e6;
+    --color-slate-200: #ccd4db;
+    --color-slate-700: #465462;
+    --color-slate-900: #1c2127;
+
+    /* Navy Family (Primary Brand) */
+    --color-navy-700: #2b3d4f;
+    --color-navy-600: #3e5770;
+    --color-navy-800: #19242e;
+
+    /* Emerald Family (Secondary Brand) */
+    --color-emerald-500: #28af60;
+    --color-emerald-400: #37d278;
+    --color-emerald-600: #61db94;
+
+    /* Special Cases */
+    --color-white: #ffff;
+
+    /* Semantic Colors */
+    --color-background-primary: var(--color-slate-50);
+    --color-background-sidebar: var(--color-navy-700);
+    --color-background-nav-item-active: var(--color-emerald-500);
+    --color-background-ball-green: var(--color-emerald-500);
+    --color-background-ball-blue: var(--color-navy-700);
+    --color-text-primary: var(--color-navy-700);
+    --color-text-inverse: var(--color-white);
+    --color-surface: var(--color-white);
+    --color-border: var(--color-slate-200);
+    --color-border-house-display: var(--color-navy-700);
+    --color-background-house-display: var(--color-slate-200);
+}
