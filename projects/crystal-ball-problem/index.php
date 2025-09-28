@@ -80,35 +80,44 @@
                     </div>
                 </div>
                 <div class="controls-button-group">
-                    <button type="submit" name="btn-drop">Drop Ball</button>
-                    <button type="button" name="btn-reset">Reset Simulation</button>
+                    <button type="submit" name="btn-drop" class="btn-drop">Drop Ball</button>
+                    <button type="submit" name="btn-reset" class="btn-reset">Reset Simulation</button>
                 </div>
             </form>
             <div class="separator"></div>
             <form id="strategy-form" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="GET">
                 <h2>Bulk Run</h2>
-                <label for="strategy-choice">Select a Strategy:</label>
-                <select name="strategy-choice" id="strategy-choice">
-                    <option value="optimal-strategy">Optimal Strategy</option>
-                    <option value="fixed-interval-strategy">Fixed-interval (k-step)</option>
-                    <option value="linear-strategy">Linear search (one-by-one)</option>
-                </select>
-                <p class="explanation">
-                    <b>How it works:</b><br>
-                    Drop the first ball at decreasing intervals (floor 14, then 27, 39, etc.). This balances the work
-                    between the two balls to minimize the worst-case scenario.<br>
-                    <b>Worst-case-drops:</b><br>
-                    14 drops
-                </p>
-                <button type="submit" name="btn-run-bulk" class="btn-run-bulk">Run 1000 Simulations</button>
+                <div class="strategy-control-group">
+                    <label for="strategy-choice">Select a Strategy:</label>
+                    <select name="strategy-choice" id="strategy-choice">
+                        <option value="optimal-strategy">Optimal Strategy</option>
+                        <option value="fixed-interval-strategy">Fixed-interval (k-step)</option>
+                        <option value="linear-strategy">Linear search (one-by-one)</option>
+                    </select>
+                    <p class="explanation">
+                        <b>How it works:</b><br>
+                        Drop the first ball at decreasing intervals (floor 14, then 27, 39, etc.). This balances the
+                        work
+                        between the two balls to minimize the worst-case scenario.<br>
+                        <b>Worst-case-drops:</b><br>
+                        14 drops
+                    </p>
+                </div>
+                <div class="bulk-button-group">
+                    <button type="submit" name="btn-run-bulk" class="btn-run-bulk">Run 1000 Simulations</button>
+                </div>
                 <div class="bulk-result-display">
                     <div class="bulk-success">
-                        <p>Success</p>
-                        <p>-</p>
+                        <p class="result-label">Success</p>
+                        <p class="result-value">-</p>
                     </div>
                     <div class="bulk-fail">
-                        <p>Fail</p>
-                        <p>-</p>
+                        <p class="result-label">Fail</p>
+                        <p class="result-value">-</p>
+                    </div>
+                    <div class="bulk-average">
+                        <p class="result-label">Drop &#8709;</p>
+                        <p class="result-value">-</p>
                     </div>
                 </div>
             </form>

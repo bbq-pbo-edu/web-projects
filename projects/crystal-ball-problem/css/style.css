@@ -31,6 +31,10 @@ body {
     color: var(--primary-color);
 }
 
+input[type="radio"]:checked {
+    color: var(--accent-color);
+}
+
 .container {
     display: grid;
     grid-template-columns:  1fr 8fr 3fr;
@@ -224,6 +228,39 @@ h2 {
     font-weight: bold;
 }
 
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2rem;
+    height: 1.8rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: var(--main-bg-color);
+    border: 1px solid black;
+    border-radius: 32px;
+    cursor: pointer;
+    width: 100%;
+    height: 25%;
+}
+
 .controls-card label {
     font-weight: bold;
     margin-left: .1rem;
@@ -260,14 +297,14 @@ h2 {
     gap: .5rem;
 }
 
-.controls-button-group button {
+button {
     border: 1px solid transparent;
     border-radius: 5px;
     font-size: 1.1rem;
     padding: .5rem 2rem;
 }
 
-.controls-button-group button[type="submit"] {
+.btn-drop {
     background-color: var(--accent-color);
     color: white;
     font-weight: bold;
@@ -279,7 +316,63 @@ h2 {
 
 .controls-button-group button[type="submit"]:disabled {}
 
-.controls-button-group button[type="button"] {
+.btn-reset {
     background-color: var(--main-bg-color);
     color: #6B7280;
+    margin-bottom: 1rem;
+}
+
+.separator {
+    align-self: center;
+    padding: 0 12em;
+    border: 1px solid black;
+}
+
+.strategy-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1.2rem;
+}
+
+.bulk-button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-run-bulk {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#strategy-choice {
+    padding: .8rem .5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.bulk-result-display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 1rem;
+}
+
+.bulk-result-display .result-label {
+    text-align: center;
+    color: #6B7280;
+    font-size: 1.2rem;
+}
+
+.bulk-result-display .result-value {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
