@@ -32,4 +32,5 @@
     --color-border: var(--color-slate-200);
     --color-border-house-display: var(--color-navy-700);
     --color-background-house-display: var(--color-slate-200);
+    --color-border-separator: var(--color-slate-200);
 }

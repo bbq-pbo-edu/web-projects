@@ -237,15 +237,17 @@ input[type="range"]::-webkit-slider-thumb {
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: -14px;
     background-color: var(--accent-color);
+    transition: background-color 0.2s;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-
+    background-color: var(--color-emerald-600);
 }
 
 input[type="range"]::-webkit-slider-thumb:active {
-
+    background-color: var(--color-emerald-400);
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
@@ -298,30 +300,45 @@ button {
     border-radius: 5px;
     font-size: 1.1rem;
     padding: .5rem 2rem;
+    cursor: pointer;
 }
 
 .btn-drop {
     background-color: var(--accent-color);
     color: white;
     font-weight: bold;
+    transition: background-color 0.2s;
 }
 
-.controls-button-group button[type="submit"]:hover {}
+.btn-drop:hover {
+    background-color: var(--color-emerald-600);
+}
 
-.controls-button-group button[type="submit"]:active {}
-
-.controls-button-group button[type="submit"]:disabled {}
+.btn-drop:active {
+    background-color: var(--color-emerald-400);
+}
 
 .btn-reset {
     background-color: var(--main-bg-color);
     color: #6B7280;
     margin-bottom: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #c40808;
+    color: var(--color-text-inverse);
+}
+
+.btn-reset:active {
+    background-color: #f50a0a;
 }
 
 .separator {
     align-self: center;
     padding: 0 12em;
-    border: 1px solid black;
+    border: 1px solid var(--color-border-separator);
+    opacity: .5;
 }
 
 .strategy-control-group {
@@ -342,6 +359,15 @@ button {
     color: white;
     font-weight: bold;
     margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-run-bulk:hover {
+    background-color: var(--color-navy-600);
+}
+
+.btn-run-bulk:active {
+    background-color: var(--color-navy-800);
 }
 
 #strategy-choice {
@@ -351,6 +377,7 @@ button {
     font-family: inherit;
     -webkit-appearance: none;
     appearance: none;
+    cursor: pointer;
 }
 
 .bulk-result-display {
