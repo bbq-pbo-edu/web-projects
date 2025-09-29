@@ -5,7 +5,7 @@ $decodedJson = json_decode($jsonString, true);
 $interface = $decodedJson['Dhcp4']['interfaces-config']['interfaces'][0];
 $validLifetime = $decodedJson['Dhcp4']['valid-lifetime'];
 
-function cidreToSubnetMask($cidre): string
+function cidreToSubnetMask(int $cidre): string
 {
     $numOfFullOctets = floor($cidre / 8);
     $numOfBitsInPartialOctet = $cidre % 8;
