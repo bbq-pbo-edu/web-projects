@@ -27,6 +27,7 @@
     --color-background-nav-item-active: var(--color-emerald-500);
     --color-background-ball-green: var(--color-emerald-500);
     --color-background-ball-blue: var(--color-navy-700);
+    --color-background-list-card-arrow: var(--color-emerald-500);
     --color-text-primary: var(--color-navy-700);
     --color-text-inverse: var(--color-white);
     --color-surface: var(--color-white);
@@ -137,12 +138,17 @@ h1 {
     flex-direction: column;
 }
 
-.conf-values-container li {
+.conf-values-list {
+}
+
+.conf-values-container .conf-values-list-item {
+    display: flex;
+    justify-content:space-between;
     margin-bottom: 1rem;
     font-family: sans-serif;
     font-weight: bold;
     list-style: none;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem 2rem 1rem;
     background-color: var(--color-white);
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -151,4 +157,24 @@ h1 {
 .value-name {
     color: var(--color-text-primary);
     font-weight: normal;
+}
+
+.conf-values-list-arrow {
+    border: none;
+
+    background-color: var(--color-background-list-card-arrow);
+    color: var(--color-text-inverse);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 2px;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: background-color, 0.2s, color, 0.2s;
+}
+
+.conf-values-list-arrow:hover {
+    background-color: var(--color-emerald-400);
+    color: var(--color-slate-100);
 }

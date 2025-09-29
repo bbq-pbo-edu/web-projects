@@ -86,15 +86,66 @@ $dnsName = $decodedJson['Dhcp4']['subnet4'][0]['option-data'][2]['data'];
         <h1>kea-dhcp.conf reader</h1>
         <p>Lists certain values read from kea-dhcp.conf using JSON decoding in PHP.</p>
         <div class="conf-values-container">
-            <ul>
-                <li><span class="value-name">Interface: </span><?= $interface ?></li>
-                <li><span class="value-name">Valid Lifetime: </span><?= $validLifetime ?></li>
-                <li><span class="value-name">IP-Address: </span><?= $ipAddress ?></li>
-                <li><span class="value-name">Subnet Mask: </span><?= $subnetMask ?></li>
-                <li><span class="value-name">Gateway: </span><?= $gateway ?></li>
-                <li><span class="value-name">DNS-Server: </span><?= $dnsServer ?></li>
-                <li><span class="value-name">DNS Name: </span><?= $dnsName ?></li>
-            </ul>
+            <div class="conf-values-list">
+                <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="GET">
+                    <ul>
+                        <li class="conf-values-list-item">
+                            <div class="value-display">
+                                <span class="value-name">Interface: </span><?= $interface ?>
+                            </div>
+                            <button type="submit" class="conf-values-list-arrow" title="Show more" name="btn-interface">></button>
+                        </li>
+                        <li class="conf-values-list-item">
+                            <div class="value-display">
+                                <span class="value-name">Valid Lifetime: </span><?= $validLifetime ?>
+                            </div>
+                            <button type="submit" class="conf-values-list-arrow" title="Show more" name="btn-lifetime">
+                                >
+                            </button>
+                        </li>
+                        <li class="conf-values-list-item">
+                            <div class="value-display">
+                                <span class="value-name">IP-Address: </span><?= $ipAddress ?>
+                            </div>
+                            <button type="submit" class="conf-values-list-arrow" title="Show more"
+                                    name="btn-ip-address">>
+                            </button>
+                        </li>
+                        <li class="conf-values-list-item">
+                            <div class="value-display">
+                                <span class="value-name">Subnet Mask: </span><?= $subnetMask ?>
+                            </div>
+                            <button type="submit" class="conf-values-list-arrow" title="Show more"
+                                    name="btn-subnet-mask">>
+                            </button>
+                        </li>
+                        <li class="conf-values-list-item">
+                            <div class="value-display">
+                                <span class="value-name">Gateway: </span><?= $gateway ?>
+                            </div>
+                            <button type="submit" class="conf-values-list-arrow" title="Show more" name="btn-gateway">
+                                >
+                            </button>
+                        </li>
+                        <li class="conf-values-list-item">
+                            <div class="value-display">
+                                <span class="value-name">DNS-Server: </span><?= $dnsServer ?>
+                            </div>
+                            <button type="submit" class="conf-values-list-arrow" title="Show more"
+                                    name="btn-dns-server">>
+                            </button>
+                        </li>
+                        <li class="conf-values-list-item">
+                            <div class="value-display">
+                                <span class="value-name">DNS Name: </span><?= $dnsName ?>
+                            </div>
+                            <button type="submit" class="conf-values-list-arrow" title="Show more" name="btn-dns-name">
+                                >
+                            </button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </div>
     </main>
 </div>
