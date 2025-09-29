@@ -162,10 +162,10 @@ if (isset($_GET['btn-drop'])) {
             </form>
             <div class="separator"></div>
             <form id="strategy-form" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="GET">
-                <h2>Bulk Run</h2>
+                <h2>Bulk Run (unfinished)</h2>
                 <div class="strategy-control-group">
                     <label for="strategy-choice">Select a Strategy:</label>
-                    <select name="strategy-choice" id="strategy-choice">
+                    <select name="strategy-choice" id="strategy-choice" disabled>
                         <option value="optimal-strategy">Optimal Strategy</option>
                         <option value="fixed-interval-strategy">Fixed-interval (k-step)</option>
                         <option value="linear-strategy">Linear search (one-by-one)</option>
@@ -180,7 +180,7 @@ if (isset($_GET['btn-drop'])) {
                     </p>
                 </div>
                 <div class="bulk-button-group">
-                    <button type="submit" name="btn-run-bulk" class="btn-run-bulk">Run 1000 Simulations</button>
+                    <button type="submit" name="btn-run-bulk" class="btn-run-bulk" disabled>Run 1000 Simulations</button>
                 </div>
                 <div class="bulk-result-display">
                     <div class="bulk-success">

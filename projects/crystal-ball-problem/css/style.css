@@ -1221,6 +1221,11 @@ button {
     background-color: var(--color-navy-800);
 }
 
+.btn-run-bulk:disabled {
+    background-color: var(--color-slate-200);
+    cursor: not-allowed;
+}
+
 #strategy-choice {
     padding: .8rem .5rem;
     border-radius: 8px;
