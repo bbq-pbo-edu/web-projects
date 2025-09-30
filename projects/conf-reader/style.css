@@ -5,6 +5,10 @@
     --color-slate-100: #eaedf0;
     --color-slate-150: #dbe0e6;
     --color-slate-200: #ccd4db;
+    --color-slate-300: #aebbc6;
+    --color-slate-400: #91a2b1;
+    --color-slate-500: #91a2b1;
+    --color-slate-600-opaque-50: hsla(208, 17%, 63%, 0.5);
     --color-slate-700: #465462;
     --color-slate-900: #1c2127;
 
@@ -62,7 +66,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns:  var(--sidebar-width) 1fr;
+    grid-template-columns: var(--sidebar-width) 1fr 1fr;
     max-width: 100vw;
     min-width: 360px;
     gap: 2rem;
@@ -177,4 +181,66 @@ h1 {
 .conf-values-list-arrow:hover {
     background-color: var(--color-emerald-400);
     color: var(--color-slate-100);
+}
+
+/* === Code Block Component */
+
+.info-card-container {
+    padding: 0.5rem;
+}
+.code-container {
+}
+
+code[lang="php"] {
+    color: var(--color-text-inverse);
+}
+
+.code-title-bar {
+    background-color: #233140;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #3B4D5E;
+}
+
+.code-title-bar h5 {
+    color: var(--color-slate-200);
+    font-family: monospace;
+    padding: .5rem;
+}
+
+.code-editor {
+    display: flex;
+    color: var(--color-slate-200);
+    font-family: monospace;
+    line-height: 1.5;
+}
+
+.code-line-numbers {
+    padding: .5rem .5rem 3rem .5rem;
+    text-align: right;
+    background-color: #233140;
+    border-radius: 0 0 0 8px;
+}
+
+.code-text {
+    background-color: #2C3E50;
+    padding: .5rem 5rem 3rem .5rem;
+    height: 100%;
+    border-radius: 0 0 8px 0;
+}
+
+/* === CODE BLOCK SYNTAX HIGHLIGHTING === */
+.code-text .code-hl-variable {
+    color: #fbbf24;
+}
+
+.code-text .code-hl-string {
+    color: #a5b4fc;
+}
+
+.code-text .code-hl-keyword {
+    color: #a78bfa;
+}
+
+.code-text .code-hl-function {
+    color: #32b68a;
 }

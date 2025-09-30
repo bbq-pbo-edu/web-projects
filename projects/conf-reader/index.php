@@ -148,6 +148,30 @@ $dnsName = $decodedJson['Dhcp4']['subnet4'][0]['option-data'][2]['data'];
             </div>
         </div>
     </main>
+    <aside class="info-card-container">
+        <div class="info-card-content">
+            <h2>Interface</h2>
+            <div class="accent-separator"></div>
+            <p class="info-text"></p>
+            <div class="code-container">
+                <div class="code-title-bar">
+                    <h5>kea-conf-reader.php</h5>
+                </div>
+                <div class="code-editor">
+                    <div class="code-line-numbers">
+                        1<br>
+                        2
+                    </div>
+                    <div class="code-text">
+                        <code lang="php">
+                            <span class="code-hl-variable">$jsonString</span> = <span class="code-hl-function">file_get_contents</span>(<span class="code-hl-string">"./data/kea-dhcp4.conf"</span>);<br>
+                            <span class="code-hl-variable">$decodedJson</span> = <span class="code-hl-function">json_decode</span>(<span class="code-hl-variable">$jsonString</span>, <span class="code-hl-keyword">true</span>);
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
 </div>
 </body>
 </html>
