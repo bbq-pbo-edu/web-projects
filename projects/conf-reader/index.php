@@ -7,16 +7,11 @@ $validLifetime = $decodedJson['Dhcp4']['valid-lifetime'];
 
 function cidreToSubnetMask(int $cidre): string
 {
-    $numOfFullOctets = floor($cidre / 8);
-    $numOfBitsInPartialOctet = $cidre % 8;
+    // number of 1s = cidre ; number of 0s = 32 - cidre
     $numOfZeroBits = 32 - $cidre;
+    $subnetMaskBinary = str_repeat("1", $cidre) . str_repeat("0", $numOfZeroBits);
 
-    $subnetMaskBinary = str_repeat("11111111", $numOfFullOctets);
-
-    $subnetMaskBinary .= str_repeat("1", $numOfBitsInPartialOctet);
-
-    $subnetMaskBinary .= str_repeat("0", $numOfZeroBits);
-
+    // Add a dot after every 8 bits except for final 8 bits
     $subnetMaskBinaryDotNotation = "";
     for ($i = 0; $i < strlen($subnetMaskBinary); $i++) {
         $subnetMaskBinaryDotNotation .= $subnetMaskBinary[$i];
@@ -25,14 +20,16 @@ function cidreToSubnetMask(int $cidre): string
         }
     }
 
+    // Split binary string into 4 octets with 8 bits each
     $octetsBinary = explode(".", $subnetMaskBinaryDotNotation);
 
+    // Convert each binary octet to decimal and add to final output
     $subnetMaskDecimal = "";
-
     foreach ($octetsBinary as $octetBinary) {
         $subnetMaskDecimal .= bindec($octetBinary) . ".";
     }
 
+    // Remove any trailing dots, then return the output
     return trim($subnetMaskDecimal, ".");
 }
 
