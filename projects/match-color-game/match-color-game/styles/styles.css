@@ -1,0 +1,266 @@
+:root {
+    /* Color definitions */
+      --bg: #12141c;
+      --fg: #e2e2e2;
+      --results-fg: #aeb2c1;
+      --panel: #1e1f2b;
+      --border: #3b3d4c;
+      --outer-border: #5c5e70;
+      --input-bg: #252736;
+      --button: #6b7bfd;
+      --button-hover: #5867d9;
+      --button-bg-disabled: #3c3e55;
+      --button-fg-disabled: #888ca0;
+      --red-text: #D26C6C;
+      --green-text: #66C29C;
+      --blue-text: #76A4E0;
+      --text-outline: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* To remove the arrows on number input types: */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Font: Press Start 2P by Codeman38
+   License: SIL Open Font License 1.1
+   Source: https://fonts.google.com/specimen/Press+Start+2P
+*/
+@font-face {
+    font-family: 'PressStart2P';
+    src: url("../fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'PressStart2P', monospace;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-shadow:
+        -1px -1px 0 var(--text-outline),
+         1px -1px 0 var(--text-outline),
+        -1px  1px 0 var(--text-outline),
+         1px  1px 0 var(--text-outline);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--fg);
+    background-color: var(--bg);
+}
+
+.main-container {
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding-top: 1rem;
+}
+
+h1.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.lives-display {
+    margin-top: 1rem;
+    height: 32px;
+}
+
+.target-color-display-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 1px solid var(--outer-border);
+    border-radius: 10px;
+    margin-top: .3rem;
+}
+
+.target-color-display {
+    width: 90%;
+    height: 90%;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.input-fields-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+input.number-input {
+    font-family: "PressStart2P", monospace;
+    font-size: 1rem;
+    text-align: center;
+    width: 15%;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--fg);
+    padding: .7rem;
+}
+
+input.number-input:disabled {
+    cursor: not-allowed;
+}
+
+.labels-container {
+    font-size: 1.3rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: .5rem;
+    gap: 12px;
+}
+
+.red-text {
+    color: var(--red-text);
+}
+
+.green-text {
+    color: var(--green-text);
+}
+
+.blue-text {
+    color: var(--blue-text);
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-button {
+    font-family: "PressStart2P", monospace;
+    font-size: 1rem;
+    text-shadow:
+        -1px -1px 0 var(--text-outline),
+         1px -1px 0 var(--text-outline),
+        -1px  1px 0 var(--text-outline),
+         1px  1px 0 var(--text-outline);
+    padding: 1rem;
+    width: 28%;
+    background-color: var(--button);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+.form-button:disabled {
+    background-color: var(--button-bg-disabled);
+    color: var(--button-fg-disabled);
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
+.results-container {
+    color: var(--results-fg);
+    margin-bottom: 2rem;
+}
+
+h2.your-color-text {
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: .5rem;
+}
+
+.user-color-display-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 100px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.user-color-display {
+    width: 95%;
+    height: 90%;
+    border: 1px solid;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.red-result,
+.green-result,
+.blue-result {
+    text-align: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: normal;
+    font-size: 1rem;
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+}
+
+.red-result {
+    margin-top: 1rem;
+}
+
+.text-red {
+    color: var(--red-text);
+}
+
+.text-green {
+    color: var(--green-text);
+}
+
+.text-blue {
+    color: var(--blue-text);
+}
+
+h2.loss-message,
+h2.victory-message {
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+h2.loss-message {
+    color: var(--red-text);
+}
+
+h2.victory-message {
+    color: var(--green-text);
+}

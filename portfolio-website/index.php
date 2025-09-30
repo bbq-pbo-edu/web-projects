@@ -100,13 +100,13 @@ require_once "./data/students-data.php";
                     <div class="project-title">kea-conf-reader</div>
                 </a>
             <li class="project-card">
-                <a href="../projects/placeholder-project/">
+                <a href="../projects/match-color-game/match-color-game" target="_blank">
                     <div class="project-icon">
                         <img src="./assets/icons/project-placeholder-icon.svg"
                              alt="project placeholder icon"
                              width="32px" height="32px">
                     </div>
-                    <div class="project-title">Project Placeholder</div>
+                    <div class="project-title">Match The Color Game</div>
                 </a>
             </li>
         </ul>
