@@ -7,6 +7,10 @@ $validLifetime = $decodedJson['Dhcp4']['valid-lifetime'];
 
 function cidreToSubnetMask(int $cidre): string
 {
+    // Only accept valid cidre (0 - 32)
+    if ($cidre < 0 or $cidre > 32) {
+        return "Invalid CIDRE( $cidre ). Must be between 0 and 32.";
+    }
     // number of 1s = cidre ; number of 0s = 32 - cidre
     $numOfZeroBits = 32 - $cidre;
     $subnetMaskBinary = str_repeat("1", $cidre) . str_repeat("0", $numOfZeroBits);
